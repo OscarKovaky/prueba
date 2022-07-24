@@ -1,0 +1,53 @@
+<form [formGroup]="miFormulario">
+    <div class="container">
+        <div class="topnav">
+            <div class="search-container">
+                <input type="text"   
+                placeholder="Search..Id" 
+                formControlName="input_searchData"
+                [(ngModel)]='textoDeInputSearch' 
+                name="search">
+                <button class="button-right" 
+                *ngIf="!isDataInInputSearch; else elseBlock"
+                (click)="SearchData()" ><i class="fa fa-search"></i></button>
+                <ng-template #elseBlock>
+                    <button class="button-right" 
+                    (click)="reloadComponet()" ><i class="fa fa-close"></i></button>
+                </ng-template>
+            </div>
+            <button (click)="this.editPoke.OperationCreatePokemon()">
+                <i class="fa fa-plus"></i> Crear
+            </button>
+        </div>
+    </div>
+</form>
+<br>
+<br>
+<div class="center">
+    <div class="container">
+    <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Imagen</th>
+        <th>Ataque</th>
+        <th>Defensa</th>
+        <th>Acciones</th>
+      </tr>
+    <tr *ngFor="let pokemon of list;">
+        <td>{{pokemon.id}}</td>
+        <td>{{pokemon.name}}</td>
+        <td>{{pokemon.image}}</td>
+        <td>{{pokemon.attack}}</td>
+        <td>{{pokemon.defense}}</td>
+        <td><button (click)="DeleteItem(pokemon.id)"><i class="fa fa-trash-o "></i>
+         </button><button (click)="EditItem(pokemon.id)"><i class="fa fa-pencil-square-o"></i> </button></td>
+    </tr>
+</div>
+</div>
+<br>
+<br>
+<add-pokemon-component></add-pokemon-component>
+
+
+
+

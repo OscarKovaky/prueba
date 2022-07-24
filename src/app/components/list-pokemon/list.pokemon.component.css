@@ -1,0 +1,88 @@
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+  
+  button {
+	background-color: rgb(255, 255, 255);
+	  border: none;
+	  color: rgb(103, 69, 255);
+	  padding: 6px 10px;
+	  margin-top: 8px;
+	  margin-right: 16px;
+	  font-size: 16px;
+	  cursor: pointer;
+	}
+	
+	
+	button:hover {
+		color: rgb(0, 0, 0);
+	  }
+
+	.center{
+		display: flex;
+		justify-content: center;
+	}  
+
+
+
+	.topnav {
+		overflow: hidden;
+	  }
+	  
+	  .topnav button{
+		float: right;
+		background-color: rgb(103, 69, 255);
+		border: none;
+		color: white;
+		font-size: 16px;
+		padding: 6px 10px;
+		margin-top: 8px;
+		margin-right: 16px;
+		cursor: pointer;
+	  }
+	  
+	  .topnav button:hover {
+		background-color: rgb(0, 64, 255);
+	  }
+	  
+	  .topnav .search-container {
+		float: left;
+	  }
+	  
+	  .topnav input[type=text] {
+		padding: 6px;
+		margin-top: 8px;
+		font-size: 17px;
+		border: 1px solid rgb(123, 123, 123);
+	  }
+	  
+	  .topnav .search-container .button-right {
+		float: left;
+		padding: 6px 10px;
+		margin-top: 8px;
+		margin-right: 16px;
+		background: rgb(103, 69, 255);
+		font-size: 17px;
+		border: none;
+		cursor: pointer;
+	  }
+	  
+	  .topnav .search-container .button-right:hover {
+		background: rgb(0, 64, 255);
+	  }
+
+	  .container {
+		border-radius: 5px;
+		background-color: #ffffff;
+		border: 1px solid rgb(180, 180, 180);
+		padding: 20px;
+	  }

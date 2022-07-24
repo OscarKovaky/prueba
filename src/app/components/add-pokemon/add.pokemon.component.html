@@ -1,0 +1,55 @@
+
+<div class="center">
+<div class="container">
+<form [formGroup]="miFormulario"
+    *ngIf="isCreateOperation "
+    (ngSubmit)="submitFormulario()">
+    <br>
+    <div class="center">
+        <div *ngIf="!isCreateOrEditForm(); else elseEdit">
+            <label>Crear Pokemon</label>
+        </div>
+        <ng-template #elseEdit>
+            <label>Editar Pokemon</label>
+        </ng-template>
+    </div>
+    <br>
+    <div class="container_inline">
+            <label>Nombre</label>
+            <input type="text"
+            [(ngModel)]='Nombre'
+            name="nombre"
+            id="nombre"
+            [ngClass]="{'valid': true}"
+            formControlName="nombre" required>
+            <label>Ataque</label>
+            <input type="number" formControlName="input_tip_ataque" (change)="changeInputAtaque($event)"/>
+            <input type="range" id="slider" class="slider" #slider formControlName="ataque" />
+            <label>100</label>
+    </div>
+
+    <div class="container_inline">
+            <label>Imagen</label>
+            <input type="text"
+            [(ngModel)]='Imagen' 
+            name="imagen"
+            id="imagen"
+            formControlName="imagen" required>
+            <label>Defensa</label>
+            <input type="number" formControlName="input_tip_defensa" (change)="changeInputDefensa($event)" />
+            <input type="range" id="slider" class="slider" #slider formControlName="defensa" />
+            <label>100</label>
+    </div>
+    <br>
+    <br>
+    <div class="center">
+        <button (click)="setCancelEditPokemon()">
+            <i class="fa fa-close"></i> Cancelar
+        </button>
+        <button type="submit">
+            <i class="fa fa-floppy-o "></i> Guardar
+        </button>
+    </div>
+</form>
+</div>
+</div>
