@@ -36,7 +36,7 @@
     <tr *ngFor="let pokemon of list;">
         <td>{{pokemon.id}}</td>
         <td>{{pokemon.name}}</td>
-        <td>{{pokemon.image}}</td>
+        <td><figure><img src={{pokemon.image}} ></figure></td>
         <td>{{pokemon.attack}}</td>
         <td>{{pokemon.defense}}</td>
         <td><button (click)="DeleteItem(pokemon.id)"><i class="fa fa-trash-o "></i>

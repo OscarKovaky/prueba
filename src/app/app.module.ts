@@ -1,5 +1,5 @@
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { GenericHttp } from 'src/http/http';
@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddPokemonComponent } from './components/add-pokemon/add.pokemon.component';
 import { ListPokemonComponent } from './components/list-pokemon/list.pokemon.component';
+import { TestPokemon } from './components/pokemon-test/test.pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListPokemonComponent,
-    AddPokemonComponent
+    AddPokemonComponent,
+    TestPokemon
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { ListPokemonComponent } from './components/list-pokemon/list.pokemon.com
     ReactiveFormsModule,
     FormsModule
   ],
+  schemas: [NO_ERRORS_SCHEMA ],
   providers: [{
     provide: GenericHttp,
     useFactory: (httpClient: HttpClient) => {

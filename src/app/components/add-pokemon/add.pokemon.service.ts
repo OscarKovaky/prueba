@@ -2,10 +2,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { PokemonRequest } from 'src/app/models/pokemonRequest';
-import { ResponseApi } from 'src/app/models/ResponseApi';
 import { GenericHttp } from '../../../http/http';
 
-import { SelectListItem } from '../../models/SelectListItem';
 
 @Injectable({
   providedIn: 'root'
